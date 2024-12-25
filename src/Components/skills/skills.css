@@ -1,0 +1,167 @@
+/* ========================
+ Table of Contents
+===========================
+1. Skills Section Styles
+2. Skill Colors
+3. Animations
+4. Responsive Design
+*/
+
+/* ===============================
+ 1. Skills Section Styles
+================================== */
+.skills-page {
+    background-color: var(--secondary);
+    color: var(--title);
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* محاذاة العناصر إلى اليسار */
+  }
+  
+  .skills-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left; /* محاذاة النص إلى اليسار */
+    margin-bottom: 2rem;
+    color: var(--title);
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* عمودان في الشاشات الصغيرة */
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .skill-item {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .skill-item:active {
+    transform: scale(0.98);
+  }
+  
+  .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--subtitle);
+    transition: color 0.3s ease;
+  }
+  
+  .skill-item:hover .skill-icon {
+    color: var(--blue);
+  }
+  
+  .skill-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--title);
+    transition: color 0.3s ease;
+  }
+  
+  .skill-item:hover .skill-name {
+    color: var(--blue);
+  }
+  
+  /* ===============================
+   2. Skill Colors
+  ================================= */
+  .react {
+    color: #61dafb;
+  }
+  
+  .next {
+    color: #000;
+  }
+  
+  .redux {
+    color: #764abc;
+  }
+  
+  .redux-toolkit {
+    color: #764abc;
+  }
+  
+  .react-query {
+    color: #ff4154;
+  }
+  
+  .context {
+    color: #61dafb;
+  }
+  
+  .dom {
+    color: #f16529;
+  }
+  
+  .bom {
+    color: #264de4;
+  }
+  
+  .tailwind {
+    color: #06b6d4;
+  }
+  
+  .sass {
+    color: #cf649a;
+  }
+  
+  .mui {
+    color: #007fff;
+  }
+  
+  .bootstrap {
+    color: #563d7c;
+  }
+  
+  .git {
+    color: #f34f29;
+  }
+  
+  .figma {
+    color: #f24e1e;
+  }
+  
+  /* ===============================
+   3. Animations
+  ================================= */
+  [data-aos="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  
+  [data-aos="zoom-in"].aos-animate {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  /* ===============================
+   4. Responsive Design
+  ================================= */
+  @media (min-width: 768px) {
+    .skills-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 أعمدة للشاشات المتوسطة */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .skills-container {
+      grid-template-columns: repeat(4, 1fr); /* 4 أعمدة للشاشات الكبيرة */
+    }
+  }
+  

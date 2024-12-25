@@ -1,0 +1,93 @@
+/* تعريف الألوان باستخدام CSS Variables */
+:root {
+    --primary: #000;
+    --secondary: rgb(24 24 27);
+    --border: rgba(63, 63, 70, 0.4);
+    --title: rgb(244 244 245);
+    --subtitle: rgb(161 161 170);
+    --bgHeader: rgb(39, 39, 42);
+    --blue: rgb(93, 188, 252);
+    --icon-color-light: rgb(39, 39, 42);  /* لون الأيقونات في Light Mode */
+    --icon-color-dark: rgb(244, 244, 245); /* لون الأيقونات في Dark Mode */
+    --icon-hover-light: #4B9DFE;  /* لون الأيقونات عند المرور في Light Mode */
+    --icon-hover-dark: #4B9DFE;   /* لون الأيقونات عند المرور في Dark Mode */
+    --container-padding: 4.8rem;
+  }
+  
+  /* تطبيق الألوان الافتراضية */
+  body {
+    background-color: var(--primary);
+    color: var(--title);
+  }
+  
+  section.hero {
+    margin-top: 3rem;
+  }
+  
+  section.hero .left-section {
+    flex-grow: 1;
+  }
+  
+  section.hero .avatar {
+    width: 88px;
+    border-radius: 50%;
+    border: 1px solid darkorange;
+    padding: 1px;
+    box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.301) inset;
+  }
+  
+  section.hero h1.title {
+    font-size: 2.85rem;
+    line-height: 3.3rem;
+    margin: 24px 0;
+    color: var(--title);
+  }
+  
+  section.hero p.sub-title {
+    color: var(--subtitle);
+    font-size: 0.9rem;
+    line-height: 1.65rem;
+    margin-bottom: 32px;
+  }
+  
+  section.hero .all-icons {
+    font-size: 1.8rem;
+    gap: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    color: var(--icon-color-light); /* اللون الافتراضي في Light Mode */
+  }
+  
+  section.hero .all-icons .icon {
+    transition: 0.3s;
+    cursor: pointer;
+    color: var(--subtitle);
+  }
+  
+  section.hero .all-icons .icon:hover {
+    font-size: 1.9rem;
+    color: var(--icon-hover-light); /* اللون عند المرور في Light Mode */
+  }
+  
+  /* الوضع الداكن */
+  @media (prefers-color-scheme: dark) {
+    section.hero .all-icons {
+      color: var(--icon-color-dark);  /* اللون الافتراضي في Dark Mode */
+    }
+  
+    section.hero .all-icons .icon:hover {
+      color: var(--icon-hover-dark);  /* اللون عند المرور في Dark Mode */
+    }
+  }
+  
+  .animation {
+    width: 100%;
+    transform: translate(100px, 55px);
+  }
+  
+  @media (max-width: 1250px) {
+    .animation {
+      display: none;
+    }
+  }
+  

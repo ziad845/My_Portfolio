@@ -1,0 +1,39 @@
+footer.flex {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.9rem;
+    align-items: center; /* لضمان توازن العناصر في الفوتر */
+}
+
+footer.flex .social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+footer.flex .social-links .icon {
+    color: var(--subtitle);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer.flex .social-links .icon:hover {
+    color: var(--blue);
+    font-size: 1.6rem;
+}
+
+footer.flex p {
+    color: rgb(113, 113, 122);
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    footer.flex {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center; /* لضبط العناصر بشكل مركزي */
+    }
+
+    footer.flex .social-links {
+        gap: 1.2rem; /* زيادة المسافة بين الأيقونات في الشاشات الصغيرة */
+    }
+}
