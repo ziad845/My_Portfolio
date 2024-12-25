@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Header from './Components/Header/Header';
-import Hero from './Components/Hero/Hero';
+import Header from './Components/header/Header';
+import Hero from './Components/hero/Hero';
 import Main from './Components/main/Main';
 import Contact from './Components/contact/Contact';
 import Footer from './Components/footer/Footer';
